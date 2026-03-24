@@ -13,10 +13,6 @@ class LocalAuthService {
     try {
       return await _auth.authenticate(
         localizedReason: 'Please authenticate to access the app',
-        options: const AuthenticationOptions(
-          stickyAuth: true,
-          biometricOnly: true,
-        ),
       );
     } catch (e) {
       return false;

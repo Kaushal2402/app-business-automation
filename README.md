@@ -4,6 +4,20 @@ A production-ready Flutter app for small businesses, freelancers, and agencies. 
 
 ---
 
+## 📲 Download & Test
+
+**Latest Android APK**: [Download Business Pulse v1.0.0](https://github.com/Kaushal2402/app-business-automation/releases/latest)
+
+### 🛠️ Installation Instructions
+1. Download the `.apk` file from the link above.
+2. On your Android device, open the file.
+3. If prompted, allow "Install from unknown sources" in your settings.
+4. Open **Business Pulse** and start managing your business!
+
+> **Note**: For iOS, please build from source using Xcode as Apple requires app signing for installation on real devices.
+
+---
+
 ## 🚀 Features
 
 ### 🔒 Security & Onboarding
