@@ -1,0 +1,110 @@
+# Flutter Business Automation App (SME Focus) - Project Plan
+
+A production-ready blueprint for an all-in-one business management tool catering to agencies, freelancers, and local shops.
+
+## 🏛️ Architecture: Clean Architecture + Riverpod
+
+We will follow **Clean Architecture** to ensure the app is testable, maintainable, and scalable.
+
+### Layers:
+1. **Core**: Common utilities, constants, and base classes.
+2. **Domain**: (Pure Dart) Entities, Use Cases, and Repository Interfaces.
+3. **Data**: Repository implementations, Data Sources (API, Local DB), and Models (JSON mappers).
+4. **Presentation**: Flutter Widgets and State Management (BLoC for reactive updates & separation of concerns).
+
+---
+
+## 💻 Screen List & User Flows
+
+### 1. Onboarding & Authentication
+*   **Splash Screen**: Branding & app initialization.
+*   **Onboarding Flow**: Highlighting USP (Local & Secure).
+*   **Authentication**: Local Biometrics (Touch/Face ID) or PIN-based lock (No Server Auth).
+*   **Business Profile Setup**: Business name, industry, logo, tax info (Saved Locally).
+
+### 2. Dashboard (The Nerve Center)
+*   **Key Metrics**: Today's revenue, pending invoices, new leads.
+*   **Quick Actions**: "Send Invoice", "Add Lead", "Send WhatsApp Blast".
+*   **Notifications Bell**: Reminders and updates.
+
+### 3. CRM (Lead & Client Tracking)
+*   **Leads List**: Kanban view or list view of potential clients.
+*   **Lead Detail**: History, notes, and direct contact buttons.
+*   **Client Management**: Segmenting clients (Active, Past, High Value).
+
+### 4. Invoice & Billing
+*   **Invoice Generator**: Add items, taxes, discounts, and payment links.
+*   **Estimate to Invoice**: Convert quotes to bills in one tap.
+*   **Payment History**: Track paid vs. overdue invoices.
+
+### 5. WhatsApp Automation (The Growth Engine)
+*   **Manual Automation**: Open WhatsApp with pre-filled message via `url_launcher`.
+*   **Auto-Reminders**: Local notifications to remind the *user* to send a message.
+
+### 6. Reports & Settings
+*   **Financial Reports**: Monthly/Yearly performance.
+*   **App Settings**: Dark/Light mode, Security (Biometrics), Billing integrations.
+
+---
+
+## 🛠️ Tech Stack & Integrations
+
+| Feature | Technology Recommendation | Why? |
+| :--- | :--- | :--- |
+| **Mobile Framework** | Flutter (Fast, Cross-platform) | Best UI performance. |
+| **State Management** | BLoC (cubits/blocs) | Clear logic for local data flows. |
+| **Backend (Local)** | Isar (Primary Data Store) | Blazing fast, ACID compliant, no server needed. |
+| **Database (Caching)** | Secure Storage | For sensitive keys and local lock settings. |
+| **WhatsApp Integration**| `url_launcher` (Intent-based) | Send messages without a server API. |
+| **Payments** | Deep Links / QR Codes | Generation of UPI or Payment links for manual sending. |
+| **Monitoring** | Local Logs / Sentry (Offline) | Track issues locally during development. |
+
+### 🤖 Business Automation Logic (Example)
+
+```mermaid
+graph TD
+    A[New Lead Created] --> B[Saved to Isar DB]
+    B --> C[Check Reminder Condition]
+    C --> D[Trigger Local Notification]
+    D --> E[User Clicks: Send WhatsApp]
+    E --> F[Open WhatsApp with Pre-filled Text]
+```
+
+---
+
+## 🚀 Production-Ready Checklist
+
+### 1. Robustness & Security
+*   **Network Resilience**: Offline-first support (Hive/Isar) + Dio Interceptors.
+*   **Security**: Flutter Secure Storage for tokens; ProGuard/R8 for code obfuscation.
+*   **Localization**: Internationalization (i18n) for regional markets.
+
+### 2. Performance
+*   **Image Caching**: `cached_network_image` for lead/bill previews.
+*   **Lottie Animations**: For delightful micro-interactions.
+*   **Dynamic Theming**: Responsive UI adapting to font sizes and orientations.
+
+### 3. DevOps & CI/CD
+*   **Github Actions**: Automatic APK/IPA builds and linting.
+*   **Shorebird.dev**: (Optional) For Code Push (hot-fixing native apps without Store updates).
+*   **Internal Testing**: Firebase App Distribution.
+
+---
+
+## 📁 Suggested Directory Structure
+
+```text
+lib/
+├── core/               # App-wide utilities, themes, constants
+├── features/           # Feature-based folder structure
+│   ├── auth/
+│   ├── dashboard/
+│   ├── invoicing/
+│   ├── crm/
+│   └── whatsapp/
+│       ├── data/       # Repository & Data Sources
+│       ├── domain/     # Entities & Use Cases
+│       └── presentation/ # BLoC/Cubit & Widgets
+├── l10n/               # Localization files
+└── main.dart           # App entry point
+```

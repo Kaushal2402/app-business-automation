@@ -1,0 +1,151 @@
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (98.0.0 available)
+  analyzer 5.13.0 (12.0.0 available)
+  bloc 8.1.4 (9.2.0 available)
+  build 2.4.1 (4.0.5 available)
+  build_config 1.1.2 (1.3.0 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.13.1 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  characters 1.4.0 (1.4.1 available)
+  dart_style 2.3.2 (3.1.8 available)
+  fl_chart 0.70.2 (1.2.0 available)
+  flutter_bloc 8.1.6 (9.1.1 available)
+  flutter_launcher_icons 0.13.1 (0.14.4 available)
+  flutter_lints 4.0.0 (6.0.0 available)
+  flutter_local_notifications 17.2.4 (21.0.0 available)
+  flutter_local_notifications_linux 4.0.1 (8.0.0 available)
+  flutter_local_notifications_platform_interface 7.2.0 (11.0.0 available)
+  flutter_secure_storage 9.2.4 (10.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.0 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.0 available)
+  flutter_secure_storage_windows 3.1.2 (4.1.0 available)
+  font_awesome_flutter 10.12.0 (11.0.0 available)
+  get_it 7.7.0 (9.2.1 available)
+  google_fonts 6.3.3 (8.0.2 available)
+  js 0.6.7 (0.7.2 available)
+  lints 4.0.0 (6.1.0 available)
+  local_auth 2.3.0 (3.0.1 available)
+  local_auth_android 1.0.56 (2.0.7 available)
+  local_auth_darwin 1.6.1 (2.0.3 available)
+  local_auth_windows 1.0.11 (2.0.1 available)
+  matcher 0.12.17 (0.12.19 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.17.0 (1.18.2 available)
+  share_plus 10.1.4 (12.0.1 available)
+  share_plus_platform_interface 5.0.2 (6.1.0 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.2 available)
+  test_api 0.7.7 (0.7.11 available)
+  timezone 0.9.4 (0.11.0 available)
+  vector_math 2.2.0 (2.3.0 available)
+  win32 5.15.0 (6.0.0 available)
+Got dependencies!
+43 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing app-business-automation...                            
+
+   info • 'useMaterial3' is deprecated and shouldn't be used. Use a ThemeData constructor (.from, .light, or .dark) instead. These constructors all have a useMaterial3 argument, and they set appropriate default values based on its value. See the useMaterial3 API documentation for full details. This feature was deprecated after v3.13.0-0.2.pre • lib/core/theme/app_theme.dart:9:7 • deprecated_member_use
+   info • 'useMaterial3' is deprecated and shouldn't be used. Use a ThemeData constructor (.from, .light, or .dark) instead. These constructors all have a useMaterial3 argument, and they set appropriate default values based on its value. See the useMaterial3 API documentation for full details. This feature was deprecated after v3.13.0-0.2.pre • lib/core/theme/app_theme.dart:66:7 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/app_theme.dart:99:48 • deprecated_member_use
+   info • The type parameter name 'Type' matches a visible type name • lib/core/usecases/usecase.dart:5:24 • avoid_types_as_parameter_names
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/app_bottom_sheet.dart:96:49 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/auth/data/repositories/auth_repository_impl.dart:24:14 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/auth/data/repositories/auth_repository_impl.dart:24:19 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/auth/data/repositories/auth_repository_impl.dart:36:14 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/auth/data/repositories/auth_repository_impl.dart:36:19 • prefer_const_constructors
+warning • Unused import: 'package:dartz/dartz.dart' • lib/features/auth/presentation/cubit/profile_cubit.dart:1:8 • unused_import
+warning • The value of the field '_confirmPin' isn't used • lib/features/auth/presentation/pages/login_page.dart:18:19 • unused_field
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/onboarding_page.dart:106:56 • deprecated_member_use
+  error • Undefined name 'GoogleFonts' • lib/features/auth/presentation/pages/onboarding_page.dart:108:102 • undefined_identifier
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/onboarding_page.dart:164:44 • deprecated_member_use
+warning • Unused import: 'package:business_automation/injection_container.dart' • lib/features/auth/presentation/pages/profile_setup_page.dart:9:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/profile_setup_page.dart:185:54 • deprecated_member_use
+warning • Unused import: 'package:business_automation/features/auth/presentation/pages/profile_setup_page.dart' • lib/features/auth/presentation/pages/splash_page.dart:6:8 • unused_import
+warning • Unused import: 'package:business_automation/features/dashboard/presentation/pages/dashboard_page.dart' • lib/features/auth/presentation/pages/splash_page.dart:7:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/splash_page.dart:101:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/splash_page.dart:123:51 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/pages/splash_page.dart:152:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/growth_engine_page.dart:81:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/growth_engine_page.dart:96:58 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/crm/presentation/pages/growth_engine_page.dart:108:11 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/growth_engine_page.dart:140:52 • deprecated_member_use
+warning • Unused import: 'package:business_automation/features/dashboard/data/models/settings_model.dart' • lib/features/crm/presentation/pages/lead_detail_page.dart:13:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/lead_detail_page.dart:68:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/lead_detail_page.dart:215:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/lead_detail_page.dart:342:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/lead_detail_page.dart:402:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/lead_detail_page.dart:446:22 • deprecated_member_use
+warning • Unused import: 'dart:io' • lib/features/crm/presentation/pages/leads_page.dart:1:8 • unused_import
+warning • Unused import: 'package:intl/intl.dart' • lib/features/crm/presentation/pages/leads_page.dart:9:8 • unused_import
+warning • Unused import: 'package:business_automation/features/dashboard/data/models/settings_model.dart' • lib/features/crm/presentation/pages/leads_page.dart:13:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:220:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:256:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:276:85 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:355:66 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:431:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:535:24 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/crm/presentation/pages/leads_page.dart:580:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:193:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:226:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:235:107 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:238:29 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:277:71 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:289:38 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:291:61 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:293:54 • deprecated_member_use
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:307:27 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:310:30 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:310:53 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:311:32 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:311:55 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:312:31 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/features/dashboard/presentation/pages/dashboard_page.dart:312:54 • prefer_const_constructors
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:340:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:342:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:344:56 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:352:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:447:24 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:480:60 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:488:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:515:58 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:554:61 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/dashboard_page.dart:575:46 • deprecated_member_use
+warning • Duplicate import • lib/features/dashboard/presentation/pages/reports_page.dart:11:8 • duplicate_import
+warning • Unused import: 'package:business_automation/features/dashboard/data/models/settings_model.dart' • lib/features/dashboard/presentation/pages/reports_page.dart:12:8 • unused_import
+   info • 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre • lib/features/dashboard/presentation/pages/settings_page.dart:59:21 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/settings_page.dart:237:48 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/settings_page.dart:276:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/pages/settings_page.dart:307:42 • deprecated_member_use
+   info • The 'if' statement could be replaced by a null-aware assignment • lib/features/invoicing/data/repositories/invoice_repository_impl.dart:25:7 • prefer_conditional_assignment
+warning • Unused import: 'package:business_automation/features/dashboard/data/models/settings_model.dart' • lib/features/invoicing/presentation/pages/create_invoice_page.dart:9:8 • unused_import
+warning • The value of the local variable 'isDark' isn't used • lib/features/invoicing/presentation/pages/create_invoice_page.dart:163:15 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:256:56 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:318:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:346:69 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:475:40 • deprecated_member_use
+warning • The value of the local variable 'isDark' isn't used • lib/features/invoicing/presentation/pages/create_invoice_page.dart:503:11 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:507:34 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:509:53 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:600:82 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/create_invoice_page.dart:602:42 • deprecated_member_use
+warning • Unused import: 'package:business_automation/core/services/whatsapp_service.dart' • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:10:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:203:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:205:71 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:359:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:361:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:426:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:552:66 • deprecated_member_use
+warning • The declaration '_StatusOption' isn't referenced • lib/features/invoicing/presentation/pages/invoice_detail_page.dart:642:7 • unused_element
+warning • Unused import: 'package:business_automation/features/dashboard/data/models/settings_model.dart' • lib/features/invoicing/presentation/pages/invoices_page.dart:12:8 • unused_import
+warning • The value of the local variable 'isDark' isn't used • lib/features/invoicing/presentation/pages/invoices_page.dart:45:17 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoices_page.dart:162:84 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoices_page.dart:218:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoices_page.dart:269:93 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/invoicing/presentation/pages/invoices_page.dart:317:22 • deprecated_member_use
+warning • Unused import: 'core/services/whatsapp_service.dart' • lib/injection_container.dart:11:8 • unused_import
+warning • Unused import: 'features/dashboard/data/models/settings_model.dart' • lib/injection_container.dart:14:8 • unused_import
+

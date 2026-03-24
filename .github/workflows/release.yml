@@ -1,0 +1,60 @@
+name: Build & Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'          # Trigger on version tags like v1.0.0
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+jobs:
+  build-apk:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build release APK
+        run: flutter build apk --release
+
+      - name: Get version name
+        id: version
+        run: |
+          VERSION=$(grep 'version:' pubspec.yaml | head -1 | awk '{print $2}' | cut -d'+' -f1)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Rename APK
+        run: |
+          mv build/app/outputs/flutter-apk/app-release.apk \
+             build/app/outputs/flutter-apk/BusinessPulse-v${{ steps.version.outputs.version }}.apk
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "Business Pulse v${{ steps.version.outputs.version }}"
+          body: |
+            ## 📲 Download & Install
+
+            1. Download `BusinessPulse-v${{ steps.version.outputs.version }}.apk` below
+            2. On your Android phone: **Settings → Install unknown apps → Allow**
+            3. Open the downloaded file to install
+
+            > ℹ️ iOS: Build from source using Xcode (Apple requires signing)
+          files: |
+            build/app/outputs/flutter-apk/BusinessPulse-v${{ steps.version.outputs.version }}.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

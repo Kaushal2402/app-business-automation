@@ -1,0 +1,56 @@
+# Business Automation App - Design System
+
+A premium, minimal, and scalable design system inspired by Stripe, Notion, and Zoho.
+
+## 🎨 Color Palette (Elegant & Trustworthy)
+
+| Role | Color | Hex | Usage |
+| :--- | :--- | :--- | :--- |
+| **Primary** | Stripe Blue | `#635BFF` | Core actions, links, branding. |
+| **Success** | Emerald | `#00D63F` | Paid status, positive growth. |
+| **Warning** | Amber | `#FFB800` | Pending status, notifications. |
+| **Error** | Crimson | `#FF4D4D` | Overdue bills, critical errors. |
+| **Neutral 900**| Ink Black | `#1A1A1A` | Headings, primary text. |
+| **Neutral 500**| Slate Gray | `#6B7280` | Body text, icons. |
+| **Neutral 100**| Ghost White| `#F8FAFC` | Backgrounds, secondary cards. |
+| **Surface** | Pure White| `#FFFFFF` | Primary cards, modals. |
+
+## 🖋️ Typography (Inter - Professional & Readable)
+
+*   **Heading 1**: 24pt, Semi-Bold, Neutral 900 (Page Titles)
+*   **Heading 2**: 18pt, Semi-Bold, Neutral 900 (Section Headers)
+*   **Body Base**: 16pt, Regular, Neutral 500 (Primary Content)
+*   **Body Small**: 14pt, Regular, Neutral 500 (Subtitles, Secondary Info)
+*   **Button**: 16pt, Medium, Uppercase (Actions)
+
+## 🧩 Components (Material 3 + Custom Styling)
+
+### 1. Cards (The Main Container)
+*   **Radius**: 16px
+*   **Shadow**: `BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 20, offset: Offset(0, 4))`
+*   **Border**: 1px Solid Neutral 100 (Optional for subtle definition)
+
+### 2. Buttons
+*   **Primary**: Solid Primary, White Text, 12px Radius.
+*   **Secondary**: Neutral 100 Background, Neutral 900 Text.
+*   **Ghost**: Transparent Background, Primary Text, Underline on Hover.
+
+### 3. Inputs
+*   **Style**: Outlined, 12px Radius.
+*   **Border Color**: Neutral 200 (Default), Primary (Active), Crimson (Error).
+*   **Background**: Neutral 50 (Very light gray).
+
+### 4. Status Badges
+*   **Paid**: Soft Green BG + Dark Green Text.
+*   **Pending**: Soft Orange BG + Dark Orange Text.
+*   **Overdue**: Soft Red BG + Dark Red Text.
+
+## 📏 Spacing & Grid
+*   **Base Unit**: 8pt
+*   **Page Margin**: 20pt (Mobile), 40pt (Tablet)
+*   **Gutter**: 16pt
+
+## ✨ Micro-interactions
+*   **Scale Down**: Buttons slightly scale (0.98) on tap.
+*   **Fade In**: New items in lists fade and slide up.
+*   **Skeleton Loading**: Subtle pulse animation for data-heavy sections.

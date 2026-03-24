@@ -1,0 +1,38 @@
+# [WhatsApp Automation & Growth Engine]
+
+The CRM now includes a powerful "Growth Engine" designed for proactive engagement and automated reminders.
+
+## 🚀 Key Features
+
+### 1. Growth Engine Dashboard
+A new secondary dashboard that centralizes all business boosters.
+- **Insight Card**: High-level summary of upcoming growth actions.
+- **Upcoming Actions**: A sorted timeline of scheduled follow-ups and payment reminders.
+- **Quick WhatsApp**: One-tap messaging directly from the growth timeline using intelligent templates.
+
+### 2. Intelligent WhatsApp Templating
+A dedicated [WhatsAppService](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/core/services/whatsapp_service.dart#3-22) now handles professional communication:
+- **Lead Greeting**: Standardized welcome message for new inquiries.
+- **Payment Reminder**: Polite, pre-filled reminder with invoice details and amounts.
+- **Deep Linking**: Uses `https://wa.me/` for seamless cross-platform messaging.
+
+### 3. Local-First Reminders
+Never miss a follow-up with the new [NotificationService](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/core/services/notification_service.dart#5-53):
+- **Integrated Scheduling**: Set reminders directly from Lead and Invoice details using native date/time pickers.
+- **Offline Reliability**: Reminders work completely offline using `flutter_local_notifications`.
+- **System Synchronization**: Schedules are persisted in the Isar database and reflected across the UI.
+
+## 🛠️ Technical Implementation
+
+### Core Services
+- [whatsapp_service.dart](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/core/services/whatsapp_service.dart): Logic for URI encoding and template management.
+- [notification_service.dart](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/core/services/notification_service.dart): Wrapper for local notifications with `timezone` support.
+
+### Model Enhancements
+- [lead_model.dart](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/features/crm/data/models/lead_model.dart): Added `nextFollowUp` and `lastMessageSent`.
+- [invoice_model.dart](file:///Users/softpital/Marketing%20Websistes/Apps/app-business-automation/lib/features/invoicing/data/models/invoice_model.dart): Added `nextReminder`.
+
+## ✅ Validation Results
+- [x] WhatsApp URLs correctly encoded with multi-word messages.
+- [x] Notification scheduling permissions and delivery verified on target platforms.
+- [x] State management (BLoC) correctly updates the Growth Dashboard when new actions are scheduled from detail pages.
